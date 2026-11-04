@@ -1,6 +1,6 @@
 name: Publish site
 
-# Renders the Quarto site and deploys it to GitHub Pages on every push to main.
+# Builds the Astro site and deploys it to GitHub Pages on every push to main.
 # One-time setup: repo Settings → Pages → Build and deployment → Source: "GitHub Actions".
 
 on:
@@ -22,11 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: quarto-dev/quarto-actions/setup@v2
-      - run: quarto render
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+      - uses: withastro/action@v6
 
   deploy:
     needs: build

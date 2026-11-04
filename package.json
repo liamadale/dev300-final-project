@@ -1,0 +1,20 @@
+{
+  "name": "dev300-final-project",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.5",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@fontsource/ibm-plex-serif": "^5.3.0",
+    "astro": "^7.4.5",
+    "mermaid": "^12.3.0",
+    "rehype-citation": "^2.3.2",
+    "reveal.js": "^6.0.2"
+  }
+}

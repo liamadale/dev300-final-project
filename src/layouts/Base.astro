@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Why qualified students struggle to land a first cybersecurity job in a field that says it needs them.' } = Astro.props;
+const siteTitle = 'The Entry-Level Cybersecurity Paradox';
+const pageTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const nav = [
+  { href: '', label: 'home' },
+  { href: 'paper/', label: 'paper' },
+  { href: 'slides/', label: 'slides' },
+  { href: 'video/', label: 'video' },
+  { href: 'pathways/', label: 'pathways' },
+  { href: 'sources/', label: 'sources' },
+];
+const current = Astro.url.pathname.replace(/\/?$/, '/');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="banner" role="note">Unclassified // DEV300 Final Project // Bellevue College</div>
+    <header class="site-header">
+      <div class="inner">
+        <a class="brand" href={base}><span class="prompt">&gt;</span> entry-level_paradox<span class="cursor" aria-hidden="true"></span></a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            {nav.map(({ href, label }) => {
+              const url = base + href;
+              return (
+                <li>
+                  <a href={url} aria-current={current === url ? 'page' : undefined}>{label}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner">
+        <span>Liam Dale &amp; Michelle Stonecastle · DEV300 · Fall 2026</span>
+        <a href="https://github.com/liamadale/dev300-final-project">source on github</a>
+      </div>
+    </footer>
+
+    <script>
+      // Draw ```mermaid code blocks as diagrams, only on pages that have them.
+      const codes = document.querySelectorAll<HTMLElement>('pre > code.language-mermaid');
+      if (codes.length) {
+        // Swap each code block for a <div class="diagram"> holding the diagram source.
+        const blocks = [...codes].map((code) => {
+          const div = document.createElement('div');
+          div.className = 'diagram';
+          div.textContent = code.textContent ?? '';
+          code.parentElement!.replaceWith(div);
+          return div;
+        });
+        const { default: mermaid } = await import('mermaid');
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: {
+            darkMode: true,
+            background: '#10161e',
+            primaryColor: '#151d27',
+            primaryBorderColor: '#3ddc97',
+            primaryTextColor: '#d5dde6',
+            lineColor: '#5cc8f0',
+            fontFamily: 'IBM Plex Mono, monospace',
+            fontSize: '14px',
+          },
+        });
+        await mermaid.run({ nodes: blocks });
+      }
+    </script>
+  </body>
+</html>

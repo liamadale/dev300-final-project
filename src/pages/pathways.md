@@ -1,9 +1,11 @@
 ---
-title: "Pathways into Cybersecurity"
-subtitle: "A practical list for classmates"
+layout: ../layouts/Page.astro
+title: Pathways into Cybersecurity
+subtitle: A practical list for classmates
+kicker: Pathways
 ---
 
-These are the entry routes our research ranked highest. See the [paper](paper.qmd) for how we
+These are the entry routes our research ranked highest. See the [paper](/paper/) for how we
 scored them, and its bias section for the limits of this list.
 
 ## 1. _[Top pathway]_

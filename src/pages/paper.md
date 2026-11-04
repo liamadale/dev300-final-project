@@ -1,17 +1,16 @@
 ---
-title: "The Entry-Level Cybersecurity Paradox"
-subtitle: "Written section"
-author:
-  - Liam Dale
-  - Michelle Stonecastle
-date: last-modified
-number-sections: true
+layout: ../layouts/Page.astro
+title: The Entry-Level Cybersecurity Paradox
+subtitle: Written section
+kicker: Paper
+authors: [Liam Dale, Michelle Stonecastle]
+date: Fall 2026
 ---
 
 <!--
-How to cite: write [@key] or @key, using a key from references.bib.
+How to cite: write [@key] using a key from references.bib.
 Example: [@isc2_workforce_2024] or [@bls_infosec_analysts; @cyberseek].
-The reference list at the bottom fills itself in.
+The reference list appears where [^ref] is, at the bottom of the page.
 -->
 
 ## Problem statement
@@ -21,9 +20,9 @@ Cybersecurity Workforce Study estimated a global gap of 4.8 million professional
 [@isc2_workforce_2024], and ISC2's 2025 study shifted its focus to gaps in specific skills rather
 than headcount [@securityinfowatch_2025].
 
-**Problem statement:** students preparing for cybersecurity careers are told the industry
-desperately needs them, but the traditional application pipeline (apply online, get screened, get
-hired) is breaking down, leaving qualified entry-level candidates unable to get a foot in the door.
+> **Problem statement:** students preparing for cybersecurity careers are told the industry
+> desperately needs them, but the traditional application pipeline (apply online, get screened, get
+> hired) is breaking down, leaving qualified entry-level candidates unable to get a foot in the door.
 
 _[Expand: why this matters to us and our classmates.]_
 
@@ -36,8 +35,7 @@ Decision → Reflection. Describe the data sources and the interviews.]_
 
 ### Fishbone diagram
 
-```{mermaid}
-%%| fig-cap: "Contributing causes of the entry-level paradox (draft; edit categories as research develops)."
+```mermaid
 flowchart LR
   A["Experience requirements<br/>on entry-level postings"] --> P
   B["Automated applicant<br/>screening"] --> P
@@ -47,6 +45,8 @@ flowchart LR
   F["Jobs filled through<br/>networks, not postings"] --> P
   P(["Qualified entry-level<br/>candidates can't get hired"])
 ```
+
+_Contributing causes of the entry-level paradox (draft; edit categories as research develops)._
 
 ### 5 Whys
 
@@ -67,7 +67,7 @@ labs, certifications, government and public sector programs, internal transfers,
 Each pathway is scored 1–5 on each criterion (5 is best). The weighted score is the sum of
 score × weight.
 
-| Pathway | Cost (×_w_) | Time (×_w_) | Accessibility (×_w_) | Worked for professionals (×_w_) | Weighted score |
+| Pathway | Cost (×w) | Time (×w) | Accessibility (×w) | Worked for professionals (×w) | Weighted score |
 |---|:-:|:-:|:-:|:-:|:-:|
 | Networking and referrals | | | | | |
 | Help desk / IT-adjacent role | | | | | |
@@ -78,8 +78,6 @@ score × weight.
 | Government / public sector programs | | | | | |
 | Internal transfer | | | | | |
 
-: Weighted decision matrix (fill in weights and scores). {#tbl-matrix}
-
 _[Explain the weights and discuss the top-ranked pathways.]_
 
 ## Bias check
@@ -89,10 +87,9 @@ other Module 02 biases, and how they limit our conclusions.]_
 
 ## Findings and recommendations
 
-_[Summarize the root causes and the recommended pathways. Link to the [Pathways](pathways.qmd)
+_[Summarize the root causes and the recommended pathways. Link to the [Pathways](/pathways/)
 page.]_
 
 ## References
 
-::: {#refs}
-:::
+[^ref]

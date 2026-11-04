@@ -1,0 +1,28 @@
+---
+// Layout for the Markdown pages in src/pages/.
+// Frontmatter fields: title (required), subtitle, kicker, authors, date.
+import Base from './Base.astro';
+
+const { frontmatter } = Astro.props;
+const { title, subtitle, kicker, authors, date } = frontmatter;
+---
+
+<Base title={title} description={subtitle}>
+  <article>
+    <header class="page-head">
+      {kicker && <p class="kicker">{kicker}</p>}
+      <h1>{title}</h1>
+      {subtitle && <p class="subtitle">{subtitle}</p>}
+      {(authors || date) && (
+        <p class="meta">
+          {authors && <span>{authors.join(' & ')}</span>}
+          {authors && date && <span> · </span>}
+          {date && <span>{date}</span>}
+        </p>
+      )}
+    </header>
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</Base>
