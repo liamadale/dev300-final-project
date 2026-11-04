@@ -1,0 +1,57 @@
+---
+title: "The Entry-Level Cybersecurity Paradox"
+subtitle: "DEV300 Final Project"
+author:
+  - Liam Dale
+  - Michelle Stonecastle
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    chalkboard: false
+    footer: "DEV300 · Bellevue College"
+---
+
+<!--
+Each "##" heading starts a new slide.
+Text inside a "::: notes" block is speaker notes (press S during the presentation).
+Citations work here too: [@isc2_workforce_2024]
+-->
+
+## The paradox
+
+- A reported global gap of 4.8 million professionals [@isc2_workforce_2024]
+- Yet students struggle to land a first job
+
+::: notes
+Open with the contrast. _[Speaker notes go here.]_
+:::
+
+## Problem statement
+
+The traditional application pipeline is breaking down for entry-level candidates.
+
+## Root causes
+
+_[Fishbone summary]_
+
+## Pathways we found
+
+_[Divergent brainstorm highlights]_
+
+## What ranked highest
+
+_[Decision matrix results]_
+
+## What could bias our results
+
+_[Survivorship bias]_
+
+## Recommendations
+
+_[Top pathways for classmates]_
+
+## Sources {.smaller}
+
+::: {#refs}
+:::

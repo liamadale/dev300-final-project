@@ -1,0 +1,11 @@
+---
+title: "Sources"
+toc: false
+nocite: |
+  @*
+---
+
+Every source in `references.bib`, including ones not yet cited in the paper.
+
+::: {#refs}
+:::

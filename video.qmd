@@ -1,0 +1,20 @@
+---
+title: "Recorded Section"
+toc: false
+---
+
+<!--
+Upload the video to YouTube as "Unlisted" (don't commit the file; GitHub rejects files over 100 MB).
+Then replace VIDEO_ID below with the ID from the URL, e.g. youtube.com/watch?v=VIDEO_ID,
+and remove the placeholder note.
+-->
+
+::: {.callout-note}
+The recorded section will be posted here.
+:::
+
+<!-- {{< video https://www.youtube.com/watch?v=VIDEO_ID >}} -->
+
+## About this recording
+
+_[Short description: who appears, what it covers, runtime.]_
