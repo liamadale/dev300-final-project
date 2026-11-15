@@ -236,6 +236,16 @@ main {
 }
 .prose .diagram svg { max-width: 100%; height: auto; }
 
+/* Images (e.g. the fishbone diagram): capped and centered so they don't fill the page */
+.prose img {
+  display: block;
+  max-width: min(100%, 32rem);
+  height: auto;
+  margin: 1.5rem auto 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
 /* Placeholder text: wrap in <mark>...</mark> or use _[...]_ */
 .prose mark {
   background: transparent;
